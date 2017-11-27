@@ -19,8 +19,18 @@ namespace Mod_9_Homework
             this.city = city;
         }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string City { get; set; }
+        public string FirstName
+        {
+            get { return firstName; }
+        }
+
+        public string LastName { get { return lastName; } }
+        public string City { get { return city; } }
+
+        public override string ToString()
+        {
+            string result = string.Format("{0} {1} from {2}", this.firstName, this.lastName, this.city);
+            return result;
+        }
     }
 }
